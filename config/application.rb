@@ -26,5 +26,8 @@ module App
     # Do not swallow errors in after_commit/after_rollback callbacks.
     #config.active_record.raise_in_transactional_callbacks = true
     config.secret_key_base = "5a2f3526648afb77e04dcb282229af6345712366283cde2bda4e8ad8591b33a71e3831c263dd1c203515f2b4d2f2aa727010d3aaf5306d0cda9abda1dabe44eb"
+    config.action_dispatch.default_headers = {                                                                  
+         'X-Frame-Options' => 'ALLOWALL'                                                                             
+       }
   end
 end
