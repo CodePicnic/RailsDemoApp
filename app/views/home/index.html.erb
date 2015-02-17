@@ -1,0 +1,13 @@
+<h1>Latest ProductHunt collections</h1>
+
+<ul>
+
+  <% @collections.each do |collection| %>
+    <li>
+      <strong><%= link_to collection['name'], collection['collection_url'] %></strong>
+      <span style="background:url('<%= collection['user']['image_url']['48px'] %>') no-repeat"><%= collection['user']['name'] %></span>
+      <em>Featuring <%= pluralize(collection['posts_count'], "product", "products") %> </em>
+    </li>
+  <% end %>
+
+</ul>
